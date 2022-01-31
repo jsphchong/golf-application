@@ -11,5 +11,14 @@ func CreateGolfer(w http.ResponseWriter, r *http.Request){
 	var g Golfer
 	json.Unmarshal(body, &g)
 
+	if ValidateFields() {
+		w.WriteHeader(http.StatusBadRequest)
+		return
+	}
 
+
+}
+
+func ValidateFields() bool{
+	return true
 }
