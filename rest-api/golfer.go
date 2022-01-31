@@ -6,10 +6,10 @@ import (
 	"net/http"
 )
 
-func CreatePost(w http.ResponseWriter, r *http.Request){
+func CreateGolfer(w http.ResponseWriter, r *http.Request){
 	body, _ := ioutil.ReadAll(r.Body)
 	var g Golfer
 	json.Unmarshal(body, &g)
 
-	
+
 }

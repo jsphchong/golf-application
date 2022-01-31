@@ -4,7 +4,10 @@ import "time"
 
 type Golfer struct {
 	Id        string
-	Name      string
+	FirstName string
+	LastName  string
+	Age       int
+	Birthday  time.Time
 	StartDate time.Time
 	Stats     *Statistics
 	Rounds    []Round
